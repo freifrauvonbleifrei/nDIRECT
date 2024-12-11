@@ -1,3 +1,6 @@
+#ifndef NDIRECT_SMM_KERNEL_H
+#define NDIRECT_SMM_KERNEL_H
+
 void SMM_NN_KERNEL8x1(float *C, float *A, float *B, long M, long N, long K,
                       long LN, long LK, float *SB, long k_tag)
 {
@@ -4210,3 +4213,5 @@ void SMM(float *C, float *A, float *B, long	M, long N, long K,
 	);
 
 }
+
+#endif // define NDIRECT_SMM_KERNEL_H
