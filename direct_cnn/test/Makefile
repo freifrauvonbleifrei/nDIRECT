@@ -5,7 +5,7 @@ NDIRECT_LIB    = $(NDIRECT_PREFIX)/ND/lib
 OTHER_LIBS  = -fopenmp
 
 CC          = g++
-CFLAGS      = -g -fopenmp -O3 -I$(NDIRECT_INC) -L$(NDIRECT_LIB) -lnd
+CFLAGS      = -march=native -g -fopenmp -O3 -I$(NDIRECT_INC) -L$(NDIRECT_LIB) -lnd
 LINKER      = $(CC)
 
 OBJS        = test.o
