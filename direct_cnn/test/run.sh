@@ -1,5 +1,6 @@
 #                                                C  K  H  W  R  S  stride  padh  padw
-export GOMP_CPU_AFFINITY="0-63"
+CORES_LIST=$( lscpu | grep "On-line CPU" | grep -oE '[^ ]+$' )
+export GOMP_CPU_AFFINITY=${CORES_LIST}
 rm -rf NDIRECT_CONV_FT.txt
 #Resnet-50
 yhrun -p thcp1 numactl -i 0-7 ./a.out 3 64 224 224 7 7 2 3 3
